@@ -7,3 +7,6 @@ print(name)
 
 print("calculating the lenght of string")
 print(len(name))
+
+
+print(len(input("enter the name")))
