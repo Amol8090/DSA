@@ -24,13 +24,37 @@
 #     print(i)
 
 
-for i in range(0,100):
-    if i%3==0 and i%5==0:
-        print("FizzBuzz")
-    elif i%3==0:
-        print("Fizz")
-    elif i%5==0:
-        print("Buzz")
+# for i in range(0,100):
+#     if i%3==0 and i%5==0:
+#         print("FizzBuzz")
+#     elif i%3==0:
+#         print("Fizz")
+#     elif i%5==0:
+#         print("Buzz")
 
-    else:
-        print(i)
+#     else:
+#         print(i)
+
+import string
+import random
+lst = list(string.ascii_lowercase)
+# print(lst)
+num = ['1','2','3','4','5'] 
+
+nr_letter=int(input("lenght of letter"))
+nr_number=int(input("how many number"))
+
+password=[]
+for char in range(0,nr_letter):
+   password+= random.choice(lst)
+
+for numm in range(0,nr_number):
+    password+=random.choice(num)
+
+
+random.shuffle(password)
+
+passstr=''
+for i in password:
+    passstr+=i
+print(passstr)
